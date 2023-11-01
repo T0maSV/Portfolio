@@ -1,6 +1,8 @@
 
 /* General settings */
 
+
+
 #body-index{
     margin: 0;
     padding: 0;
@@ -11,6 +13,8 @@
     background-image: url(/images/digital-global-connection-network-technology-background/23324.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 #body-page{
@@ -25,12 +29,10 @@
 
 
 
-
-
-
 /* Responsive */
 
 .container{
+    background-color: #09090927; /* Applique un filtre sombre */
     display: grid;
     grid-template-columns: 1fr;
     width: 100vw;
@@ -47,10 +49,6 @@
     grid-template-areas: 
     "nav";
 }
-
-
-
-
 
 
 /* Navbar */
@@ -108,7 +106,6 @@
         margin: 0 2em;
     }
 }
-
 @media screen and (max-width: 1000px){
     
     nav{
@@ -155,7 +152,6 @@
 .yellow-button{
     color: #D9A21B;
 }
-
 nav div ul li a{
     color: #F8F8F8;
 }
@@ -163,15 +159,29 @@ nav div ul li a:hover{
     color: #FFEECB;
 }
 
-
-
-
-
-
-
-
-/* Corps de page */
+/* Corps de la page index */
 
 section{
     grid-area: sec;
+}
+
+#block-banner{
+    text-align: center;
+    background-color: #e1f1ff6c;
+    padding: 4em 0 4em 0;
+    margin: 2em 4em 2em 4em;
+    border-radius: 30px;
+    color: #F8F8F8;
+    line-height: 4em;
+}
+#block-banner h1{
+    display: inline-block;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+}
+#block-banner h5{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
 }
