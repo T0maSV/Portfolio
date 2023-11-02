@@ -207,7 +207,7 @@ nav div ul li a:hover{
 #header-am{
     grid-area: hed;
     text-align: left;
-    height: 80vh;
+    height: 50vh;
     position: relative;
     background-color: #09090927;
     background-image: url("../images/vue-frontale-ordinateur-portable-tasse-cafe.jpg");
