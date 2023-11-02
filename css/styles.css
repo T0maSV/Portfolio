@@ -177,7 +177,7 @@ nav div ul li a:hover{
 
 /* Corps de la page index */
 
-section{
+#banner{
     height: 90vh;
     grid-area: sec;
 }
