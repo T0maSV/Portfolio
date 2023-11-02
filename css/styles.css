@@ -2,9 +2,7 @@
 /* General settings */
 
 @import url(https://db.onlinewebfonts.com/c/6b2d532d2a62dade858748f086e69043?family=PP+Eiko+Medium); 
-
-
-@font-face {
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-5?styles=103506');@font-face {
     font-family: "PP Eiko Medium";
     src: url("https://db.onlinewebfonts.com/t/6b2d532d2a62dade858748f086e69043.eot");
     src: url("https://db.onlinewebfonts.com/t/6b2d532d2a62dade858748f086e69043.eot?#iefix")format("embedded-opentype"),
@@ -229,11 +227,34 @@ nav div ul li a:hover{
 }
 
 section{
+    display: block;
     grid-area: sec;
-    background-color: #ffeecb;
-    margin: 0 6vw 0 6vw;
+    /* background-color: #ffeecb; */
+    margin: 6vh 6vw 6vh 6vw;
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
-section p{
-    font-size: 1em;
+section span{
+    display: block;
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 0.5em;
 }
+section h1{
+    font-size: 2em;
+}
+
+
+section img{
+    max-height: 30%;
+    max-width: 50%;
+    border: solid 1px #090909;
+    border-radius: 10px;
+}
+section p{
+    text-align: center;
+    font-size: 2em;
+    padding: 1vh 0 6vh 0;
+}
+
