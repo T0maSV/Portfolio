@@ -1,5 +1,10 @@
 
 /* General settings */
+html {
+    scroll-behavior: smooth;
+}
+
+
 
 @import url(https://db.onlinewebfonts.com/c/6b2d532d2a62dade858748f086e69043?family=PP+Eiko+Medium); 
 @import url('https://fonts.cdnfonts.com/css/helvetica-neue-5?styles=103506');@font-face {
@@ -242,19 +247,74 @@ section span{
     line-height: 0.5em;
 }
 section h1{
-    font-size: 2em;
+    font-size: 3em;
 }
-
-
 section img{
-    max-height: 30%;
-    max-width: 50%;
+    max-height: 25%;
+    max-width: 25%;
     border: solid 1px #090909;
     border-radius: 10px;
 }
 section p{
     text-align: center;
-    font-size: 2em;
-    padding: 1vh 0 6vh 0;
+    font-size: 1.5em;
+    margin: 3vh 0 10vh 0;
 }
 
+
+
+@media screen and (min-width: 1000px){
+
+    section table{
+        border-collapse: collapse;
+        width: 100%;
+        margin: 10vh 0 10vh;
+        font-size: 1.5em;
+    }
+    section tr{
+        text-align: left;
+    }
+    section th{
+        vertical-align: top;
+        width: 25vw;
+        font-weight: bold;
+        font-size: 2vw;
+    }
+    .name-school{
+        font-size: 1em;
+        text-align: left;
+        line-height: 1em;
+        font-weight: lighter;
+    }
+    section td{
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 1000px){
+
+    section table{
+        border-collapse: collapse;
+        width: 100%;
+        margin: 10vh 0 10vh;
+        font-size: 1.5em;
+    }
+    section tr{
+        text-align: left;
+    }
+    section th{
+        vertical-align: top;
+        width: 25vw;
+        font-weight: bold;
+        font-size: 5vw;
+    }
+    .name-school{
+        font-size: 1em;
+        text-align: left;
+        line-height: 1em;
+        font-weight: lighter;
+    }
+    section td{
+        font-weight: bold;
+    }
+}
