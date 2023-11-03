@@ -210,7 +210,7 @@ nav div ul li a:hover{
     padding: 0;
 }
 
-/* Corps de page*/
+/* Corps des pages*/
 
 .header{
     grid-area: hed;
@@ -253,7 +253,7 @@ nav div ul li a:hover{
 section{
     display: block;
     grid-area: sec;
-    margin: 6vh 6vw 6vh 6vw;
+    margin: 0 6vw 0 6vw;
     text-align: center;
     font-family: 'Helvetica Neue', sans-serif;
 }
@@ -262,20 +262,24 @@ section span{
     text-align: center;
     font-size: 0.8em;
     line-height: 0.5em;
+    margin-top: 4vh;
+}
+section hr{
+    margin-bottom: 8vh;
 }
 section h1{
     font-size: 3em;
 }
 section img{
-    max-height: 20%;
-    max-width: 20%;
+    margin-bottom: 1vh;
+    height: 300px;
     border: solid 1px #090909;
     border-radius: 10px;
 }
 section p{
     text-align: center;
     font-size: 1.5em;
-    margin: 3vh 0 10vh 0;
+    /* margin: 3vh 0 10vh 0; */
 }
 
 @media screen and (min-width: 1000px){
@@ -300,6 +304,7 @@ section p{
         text-align: left;
         line-height: 1em;
         font-weight: lighter;
+        margin: 0;
     }
     section td{
         font-weight: bold;
@@ -336,13 +341,12 @@ section p{
 }
 
 #contact{
-    margin: 10vh 0 -5vh 0;
-
+    margin: 0 0 6vh 0;
 }
 #contact div{
     text-align: center;
     margin: 0;
-    padding-bottom: 5vh;
+    padding-bottom: 4vh;
 }
 #contact div h2{
     display: inline-block;
