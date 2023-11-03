@@ -21,7 +21,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Andika', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     background-image: url("../images/digital-global-connection-network-technology-background/23324.jpg");
     background-size: cover;
     background-position: center;
@@ -32,7 +32,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Andika', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     height: 100vh;
     width: 100vw;
     background-color: #F8F8F8;
@@ -58,7 +58,8 @@ html {
     grid-template-areas: 
     "nav"
     "hed"
-    "sec";
+    "sec"
+    "ft";
 }
 
 
@@ -75,8 +76,8 @@ html {
         grid-area: nav;
         width: 100%;
         height: 50px;
-        /* position: fixed; */
         background-color: #090909;
+        font-family: 'Andika', sans-serif;
     }
 
     #block-img{
@@ -132,6 +133,8 @@ html {
         top: 0;
         width: 100%;
         text-align: center;
+        font-family: 'Andika', sans-serif;
+
     }
 
     #block-img{
@@ -207,20 +210,19 @@ nav div ul li a:hover{
     padding: 0;
 }
 
-/* Corps de page About me */
+/* Corps de page*/
 
-#header-am{
+.header{
     grid-area: hed;
     text-align: left;
     height: 50vh;
     position: relative;
     background-color: #09090927;
-    background-image: url("../images/vue-frontale-ordinateur-portable-tasse-cafe.jpg");
     background-size: cover;
     background-position: center;
 }
 
-#header-am h1{
+.header h1{
     position: absolute;
     left: 0;
     bottom: 0;
@@ -231,15 +233,30 @@ nav div ul li a:hover{
     color: #ffeecb;
 }
 
+#header-am{
+    background-image: url("../images/vue-frontale-ordinateur-portable-tasse-cafe.jpg");
+}
+#header-in{
+    background-image: url("../images/milky-way-4526277_1920.jpg");
+}
+#header-obj{
+    background-image: url("../images/arriere-plan-stockage-nuage-remixe-du-domaine-public-par-nasa.jpg");
+}
+#header-src{
+    background-image: url("../images/photo-recadree-jeune-homme-serieux-assis-dans-coworking-bureau.jpg");
+}
+
+
+
+
+
 section{
     display: block;
     grid-area: sec;
-    /* background-color: #ffeecb; */
     margin: 6vh 6vw 6vh 6vw;
     text-align: center;
     font-family: 'Helvetica Neue', sans-serif;
 }
-
 section span{
     display: block;
     text-align: center;
@@ -250,8 +267,8 @@ section h1{
     font-size: 3em;
 }
 section img{
-    max-height: 25%;
-    max-width: 25%;
+    max-height: 20%;
+    max-width: 20%;
     border: solid 1px #090909;
     border-radius: 10px;
 }
@@ -260,8 +277,6 @@ section p{
     font-size: 1.5em;
     margin: 3vh 0 10vh 0;
 }
-
-
 
 @media screen and (min-width: 1000px){
 
@@ -278,7 +293,7 @@ section p{
         vertical-align: top;
         width: 25vw;
         font-weight: bold;
-        font-size: 2vw;
+        font-size: 1em;
     }
     .name-school{
         font-size: 1em;
@@ -288,9 +303,9 @@ section p{
     }
     section td{
         font-weight: bold;
+        font-size: 1em;
     }
 }
-
 @media screen and (max-width: 1000px){
 
     section table{
@@ -306,7 +321,7 @@ section p{
         vertical-align: top;
         width: 25vw;
         font-weight: bold;
-        font-size: 5vw;
+        font-size: 1em;
     }
     .name-school{
         font-size: 1em;
@@ -316,5 +331,50 @@ section p{
     }
     section td{
         font-weight: bold;
+        font-size: 1em;
     }
+}
+
+#contact{
+    margin: 10vh 0 -5vh 0;
+
+}
+#contact div{
+    text-align: center;
+    margin: 0;
+    padding-bottom: 5vh;
+}
+#contact div h2{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5em;
+}
+#contact div img{
+    vertical-align: middle;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+#contact a{
+    text-decoration: none;
+    color: #090909;
+}
+#contact a:hover{
+    color: #D9A21B;
+}
+
+
+
+
+/* Pieds de page */
+
+footer{
+    grid-area: ft;
+    display: block;
+    height: 50px;
+    background-color: #090909;
+    color: #F8F8F8;
+    text-align: center;
+    line-height: 50px;
+    font-size: 0.8em;
 }
