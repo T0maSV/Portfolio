@@ -270,12 +270,31 @@ section hr{
 section h1{
     font-size: 3em;
 }
-section img{
-    margin-bottom: 1vh;
-    height: 300px;
-    border: solid 1px #090909;
-    border-radius: 10px;
+
+
+@media screen and (min-width: 1000px){
+    section img{
+        margin-bottom: 1vh;
+        height: 300px;
+        border: solid 1px #090909;
+        border-radius: 10px;
+    }
 }
+
+@media screen and (max-width: 1000px){
+    section img{
+        display: inline-block;
+        margin-bottom: 1vh;
+        height: 180px;
+        border: solid 1px #090909;
+        border-radius: 10px;
+    }
+}
+
+
+
+
+
 section p{
     text-align: center;
     font-size: 1.5em;
