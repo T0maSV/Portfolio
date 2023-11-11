@@ -287,7 +287,6 @@ section h1{
 
 @media screen and (min-width: 1000px){
     section img{
-        margin-bottom: 1vh;
         height: 300px;
         border: solid 1px #090909;
         border-radius: 10px;
@@ -297,7 +296,6 @@ section h1{
 @media screen and (max-width: 1000px){
     section img{
         display: inline-block;
-        margin-bottom: 1vh;
         height: 180px;
         border: solid 1px #090909;
         border-radius: 10px;
