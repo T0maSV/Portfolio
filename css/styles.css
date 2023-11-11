@@ -221,16 +221,31 @@ nav div ul li a:hover{
     background-size: cover;
     background-position: center;
 }
-
-.header h1{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 0;
-    margin: 0 0 50px 50px;
-    font-family: "PP Eiko Medium";
-    font-size: 8vw;
-    color: #ffeecb;
+@media screen and (min-width: 1000px){
+    .header h1{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 0;
+        margin: 0 0 50px 50px;
+        font-family: "PP Eiko Medium";
+        font-size: 8vw;
+        color: #ffeecb;
+        text-shadow: 1px 1px 5px #090909;
+    }
+}
+@media screen and (max-width: 1000px){
+    .header h1{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 0;
+        margin: 0 0 50px 50px;
+        font-family: "PP Eiko Medium";
+        font-size: 12vw;
+        color: #ffeecb;
+        text-shadow: 1px 1px 5px #090909;
+    }
 }
 
 #header-am{
