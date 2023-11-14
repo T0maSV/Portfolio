@@ -1,354 +1,389 @@
+/* Intégration des polices de caractères à la page web */
+    @font-face{
+        font-family: "PP Eiko Medium";
+        src: url("../fonts/ppeiko-medium.otf");
+    }
+
+    @font-face{
+        font-family: "Helvetica Neue";
+        src: url("../fonts/HelveticaNeue-Light.otf");
+    }
+
+    @font-face{
+        font-family: "Andika";
+        src: url("../fonts/Andika-Regular.ttf");
+    }
+
+
 
 /* General settings */
-html {
-    scroll-behavior: smooth;
-}
 
-/* 
-* {
-    box-shadow: 0 0 0 3px red inset;
-} */
+    html {
+        scroll-behavior: smooth;
+    }
 
-@font-face{
-    font-family: "PP Eiko Medium";
-    src: url("../fonts/ppeiko-medium.otf");
-}
+    #body-page{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Helvetica Neue';
+        background-color: #F8F8F8;
+    }
 
-@font-face{
-    font-family: "Helvetica Neue";
-    src: url("../fonts/HelveticaNeue-Light.otf");
-}
 
-#body-page{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Helvetica Neue';
-    background-color: #F8F8F8;
-}
 
-/* General responsive grid */
+/* Disposition générale des grids de la page */
 
-.wrapper{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "nav"
-    "hed"
-    "sec"
-    "ft";
-}
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "nav"
+        "hed"
+        "sec"
+        "ft";
+    }
+
 
 
 /* Navbar */
 
-@media screen and (min-width: 1000px){
+    @media screen and (min-width: 850px){
 
-    #body-index{
-        height: 100vh;
-        width: 100vw;
+        #body-index{
+            height: 100vh;
+            width: 100vw;
+        }
+
+        nav{
+            grid-area: nav;
+            width: 100%;
+            height: 50px;
+            background-color: #090909;
+            font-family: 'Andika', sans-serif;
+        }
+
+        #block-img{
+            background-color: #090909;
+            display: inline-block;
+            width: auto;
+            height: 50px;
+        }
+        nav img{
+            height: auto;
+            width: auto;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 0px 0px 0px 2em;
+            vertical-align: middle;
+        }
+
+        #block-list{
+            background-color: #090909;
+            display: inline-block;
+            text-align: center;
+            position: absolute;
+            height: 50px;
+            width: auto;
+            top: 0;
+            right: 0;
+        }
+        nav #menu-list{
+            list-style-type: none;
+            line-height: 50px;
+            margin: 0;
+            padding: 0;
+        }
+        nav #menu-list li{
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+        nav #menu-list li a{
+            font-size: 20px;
+            text-decoration: none;
+            margin: 0 2em;
+        }
+    }
+    @media screen and (max-width: 849px){
+
+        #body-index {
+            background-size: cover;
+        }
+
+        nav{
+            grid-area: nav;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            font-family: 'Andika', sans-serif;
+
+        }
+
+        #block-img{
+            display: block;
+            background-color: #090909;
+        }
+        nav img{
+            display: inline-block;
+            width : 6em;
+            height : auto;
+            vertical-align: middle;
+        }
+
+        #block-list{
+            display: block;
+            background-color: #090909;
+            padding: 2em 0 2em 0;
+        }
+
+        nav #menu-list{
+            list-style-type: none;
+            line-height: 3em;
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+        }
+        nav #menu-list li{
+            display: block;
+            margin: 0;
+        }
+        nav #menu-list li a{
+            font-size: 20px;
+            text-decoration: none;
+        }
     }
 
-    nav{
-        grid-area: nav;
-        width: 100%;
-        height: 50px;
-        background-color: #090909;
-        font-family: 'Andika', sans-serif;
-    }
+    /* Personnalisation des couleurs des titres + effet au passage de la souris */
 
-    #block-img{
-        background-color: #090909;
-        display: inline-block;
-        width: auto;
-        height: 50px;
+    .yellow-button{
+        color: #D9A21B;
     }
-    nav img{
-        height: auto;
-        width: auto;
-        max-width: 100%;
-        max-height: 100%;
-        margin: 0px 0px 0px 2em;
-        vertical-align: middle;
+    nav div ul li a{
+        color: #F8F8F8;
+        transition: all 0.3s ease-out;
     }
-
-    #block-list{
-        background-color: #090909;
-        display: inline-block;
-        text-align: center;
-        position: absolute;
-        height: 50px;
-        width: auto;
-        top: 0;
-        right: 0;
+    nav div ul li a:hover,:focus{
+        color: #FFEECB;
     }
-    nav #menu-list{
-        list-style-type: none;
-        line-height: 50px;
-        margin: 0;
-        padding: 0;
-    }
-    nav #menu-list li{
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-    }
-    nav #menu-list li a{
-        font-size: 20px;
-        text-decoration: none;
-        margin: 0 2em;
-    }
-}
-@media screen and (max-width: 1000px){
-
-    #body-index {
-        background-size: cover;
-    }
-
-    nav{
-        grid-area: nav;
-        top: 0;
-        width: 100%;
-        text-align: center;
-        font-family: 'Andika', sans-serif;
-
-    }
-
-    #block-img{
-        display: block;
-        background-color: #090909;
-    }
-    nav img{
-        display: inline-block;
-        width : 6em;
-        height : auto;
-        vertical-align: middle;
-    }
-
-    #block-list{
-        display: block;
-        background-color: #090909;
-        padding: 2em 0 2em 0;
-    }
-
-    nav #menu-list{
-        list-style-type: none;
-        line-height: 3em;
-        vertical-align: middle;
-        margin: 0;
-        padding: 0;
-    }
-    nav #menu-list li{
-        display: block;
-        margin: 0;
-    }
-    nav #menu-list li a{
-        font-size: 20px;
-        text-decoration: none;
-    }
-}
-
-.yellow-button{
-    color: #D9A21B;
-}
-nav div ul li a{
-    color: #F8F8F8;
-}
-nav div ul li a:hover{
-    color: #FFEECB;
-}
 
 
 /* Corps des pages*/
 
-.header{
-    grid-area: hed;
-    text-align: left;
-    height: 45vh;
-    position: relative;
-    background-color: #09090927;
-    background-size: cover;
-    background-position: center;
-}
-@media screen and (min-width: 1000px){
-    .header h1{
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        padding: 0;
-        margin: 0 0 50px 50px;
-        font-family: "PP Eiko Medium";
-        font-size: 6vw;
-        color: #ffeecb;
-        text-shadow: 1px 1px 5px #090909;
+
+
+/* Header (bannière + titre) */
+
+    .header{
+        grid-area: hed;
+        text-align: left;
+        position: relative;
+        background-color: #09090927;
+        background-size: cover;
+        background-position: center;
     }
-}
-@media screen and (max-width: 1000px){
-    .header h1{
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        padding: 0;
-        margin: 0 0 50px 50px;
-        font-family: "PP Eiko Medium";
-        font-size: 10vw;
-        color: #ffeecb;
-        text-shadow: 1px 1px 5px #090909;
+    @media screen and (min-width: 850px){
+
+        .header{
+            height: 400px;
+        }
+
+        .header h1{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 0;
+            margin: 0 0 50px 50px;
+            font-family: "PP Eiko Medium";
+            font-size: 6vw;
+            color: #ffeecb;
+            text-shadow: 1px 1px 5px #090909;
+        }
     }
-}
+    @media screen and (max-width: 849px){
+        
+        .header{
+            height: 300px;
+        }
 
-#header-am{
-    background-image: url("../images/vue-frontale-ordinateur-portable-tasse-cafe.jpg");
-}
-#header-in{
-    background-image: url("../images/milky-way-4526277_1920.jpg");
-}
-#header-obj{
-    background-image: url("../images/arriere-plan-stockage-nuage-remixe-du-domaine-public-par-nasa.jpg");
-}
-#header-src{
-    background-image: url("../images/photo-recadree-jeune-homme-serieux-assis-dans-coworking-bureau.jpg");
-}
-
-
-
-section{
-    display: block;
-    grid-area: sec;
-    margin: 0 7vw 0 7vw;
-    text-align: center;
-    font-family: 'Helvetica Neue', sans-serif;
-}
-section span{
-    display: block;
-    text-align: center;
-    font-size: 0.8em;
-    line-height: 0.5em;
-    margin-top: 4vh;
-}
-section hr{
-    margin-bottom: 8vh;
-}
-section h1{
-    font-size: 2.5em;
-}
-
-
-@media screen and (min-width: 1000px){
-    section img{
-        height: 250px;
-        border: solid 1px #090909;
-        border-radius: 10px;
+        .header h1{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 0;
+            margin: 0 0 50px 50px;
+            font-family: "PP Eiko Medium";
+            font-size: 10vw;
+            color: #ffeecb;
+            text-shadow: 1px 1px 5px #090909;
+        }
     }
-}
 
-@media screen and (max-width: 1000px){
-    section img{
+    /* Implémentation des bannières */
+
+    #header-am{
+        background-image: url("../images/vue-frontale-ordinateur-portable-tasse-cafe.jpg");
+    }
+    #header-in{
+        background-image: url("../images/milky-way-4526277_1920.jpg");
+    }
+    #header-obj{
+        background-image: url("../images/arriere-plan-stockage-nuage-remixe-du-domaine-public-par-nasa.jpg");
+    }
+    #header-src{
+        background-image: url("../images/photo-recadree-jeune-homme-serieux-assis-dans-coworking-bureau.jpg");
+    }
+
+
+
+/* Section */
+
+    section{
+        display: block;
+        grid-area: sec;
+        margin: 0 7vw 0 7vw;
+        text-align: center;
+        font-family: 'Helvetica Neue', sans-serif;
+    }
+    section span{
+        display: block;
+        text-align: center;
+        font-size: 0.8em;
+        line-height: 0.5em;
+        margin-top: 4vh;
+    }
+    section hr{
+        margin-bottom: 8vh;
+    }
+    section h1{
+        font-size: 2.5em;
+    }
+
+
+    /* Responsive des images de section du site */
+
+    @media screen and (min-width: 850px){
+        section img{
+            height: 250px;
+            border: solid 1px #090909;
+            border-radius: 10px;
+        }
+    }
+
+    @media screen and (max-width: 849px){
+        section img{
+            display: inline-block;
+            height: 180px;
+            border: solid 1px #090909;
+            border-radius: 10px;
+        }
+    }
+
+
+    section p{
+        text-align: center;
+        font-size: 1.4em;
+        margin-bottom: 10vh;
+    }
+
+    /* Tableau représentant mon parcours scolaire */
+
+    @media screen and (min-width: 850px){
+
+        section table{
+            border-collapse: collapse;
+            width: 100%;
+            margin: 10vh 0 10vh;
+            font-size: 1.4em;
+        }
+        section tr{
+            text-align: left;
+        }
+        section th{
+            vertical-align: top;
+            width: 25vw;
+            font-weight: bold;
+        }
+        .name-school{
+            font-size: 1em;
+            text-align: left;
+            line-height: 1em;
+            font-weight: lighter;
+            margin: 0;
+        }
+        section td{
+            font-weight: bold;
+        }
+    }
+    @media screen and (max-width: 849px){
+
+        section table{
+            border-collapse: collapse;
+            width: 100%;
+            margin: 10vh 0 10vh;
+            font-size: 1.4em;
+        }
+        section tr{
+            text-align: left;
+        }
+        section th{
+            vertical-align: top;
+            width: 25vw;
+            font-weight: bold;
+        }
+        .name-school{
+            font-size: 1em;
+            text-align: left;
+            line-height: 1em;
+            font-weight: lighter;
+            margin: 0;
+        }
+        section td{
+            font-weight: bold;
+        }
+    }
+
+
+    /* Liens pour les contacts */
+
+    #contact{
+        margin: 0 0 6vh 0;
+    }
+    #contact div{
+        text-align: center;
+        margin: 0;
+        padding-bottom: 4vh;
+    }
+    #contact div h2{
         display: inline-block;
-        height: 180px;
-        border: solid 1px #090909;
-        border-radius: 10px;
+        vertical-align: middle;
+        font-size: 1.5em;
     }
-}
+    #contact div img{
+        vertical-align: middle;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+    }
+    #contact a{
+        text-decoration: none;
+        color: #090909;
+    }
+    #contact a:hover{
+        color: #D9A21B;
+    }
 
 
-section p{
-    text-align: center;
-    font-size: 1.4em;
-    margin-bottom: 10vh;
-}
 
-@media screen and (min-width: 1000px){
+/* Pied de page */
 
-    section table{
-        border-collapse: collapse;
-        width: 100%;
-        margin: 10vh 0 10vh;
-        font-size: 1.4em;
+    footer{
+        grid-area: ft;
+        /* display: block; */
+        height: 50px;
+        background-color: #090909;
+        color: #F8F8F8;
+        text-align: center;
+        line-height: 50px;
+        font-size: 0.8em;
     }
-    section tr{
-        text-align: left;
-    }
-    section th{
-        vertical-align: top;
-        width: 25vw;
-        font-weight: bold;
-    }
-    .name-school{
-        font-size: 1em;
-        text-align: left;
-        line-height: 1em;
-        font-weight: lighter;
-        margin: 0;
-    }
-    section td{
-        font-weight: bold;
-    }
-}
-@media screen and (max-width: 1000px){
-
-    section table{
-        border-collapse: collapse;
-        width: 100%;
-        margin: 10vh 0 10vh;
-        font-size: 1.4em;
-    }
-    section tr{
-        text-align: left;
-    }
-    section th{
-        vertical-align: top;
-        width: 25vw;
-        font-weight: bold;
-    }
-    .name-school{
-        font-size: 1em;
-        text-align: left;
-        line-height: 1em;
-        font-weight: lighter;
-        margin: 0;
-    }
-    section td{
-        font-weight: bold;
-    }
-}
-
-#contact{
-    margin: 0 0 6vh 0;
-}
-#contact div{
-    text-align: center;
-    margin: 0;
-    padding-bottom: 4vh;
-}
-#contact div h2{
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 1.5em;
-}
-#contact div img{
-    vertical-align: middle;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-}
-#contact a{
-    text-decoration: none;
-    color: #090909;
-}
-#contact a:hover{
-    color: #D9A21B;
-}
-
-/* Pieds de page */
-
-footer{
-    grid-area: ft;
-    /* display: block; */
-    height: 50px;
-    background-color: #090909;
-    color: #F8F8F8;
-    text-align: center;
-    line-height: 50px;
-    font-size: 0.8em;
-}
