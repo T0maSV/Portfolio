@@ -105,7 +105,7 @@
             margin: 0 2em;
         }
     }
-    @media screen and (max-width: 849px){
+    @media screen and (max-width: 850px){
 
         #body-index {
             background-size: cover;
@@ -199,7 +199,7 @@
             text-shadow: 1px 1px 5px #090909;
         }
     }
-    @media screen and (max-width: 849px){
+    @media screen and (max-width: 850px){
         
         .header{
             height: 300px;
@@ -262,15 +262,17 @@
     @media screen and (min-width: 850px){
         section img{
             height: 250px;
+            width: auto;
             border: solid 1px #090909;
             border-radius: 10px;
         }
     }
 
-    @media screen and (max-width: 849px){
+    @media screen and (max-width: 850px){
         section img{
             display: inline-block;
-            height: 180px;
+            max-width: 70%;
+            height: auto;
             border: solid 1px #090909;
             border-radius: 10px;
         }
@@ -312,7 +314,7 @@
             font-weight: bold;
         }
     }
-    @media screen and (max-width: 849px){
+    @media screen and (max-width: 850px){
 
         section table{
             border-collapse: collapse;
@@ -369,6 +371,20 @@
     #contact a:hover{
         color: #D9A21B;
     }
+
+
+
+    .title{
+        text-decoration: underline;
+        font-size: 1.8em;
+        padding: 0;
+        margin: 0 0 10vh 0;
+    }
+
+
+
+
+
 
 
 
