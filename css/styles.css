@@ -176,7 +176,6 @@
 
     .header{
         grid-area: hed;
-        text-align: left;
         position: relative;
         background-color: #09090927;
         background-size: cover;
@@ -195,7 +194,7 @@
             padding: 0;
             margin: 0 0 50px 50px;
             font-family: "PP Eiko Medium";
-            font-size: 6vw;
+            font-size: 6rem;
             color: #ffeecb;
             text-shadow: 1px 1px 5px #090909;
         }
@@ -207,13 +206,11 @@
         }
 
         .header h1{
-            position: absolute;
-            left: 0;
-            bottom: 0;
+            text-align: center;
             padding: 0;
-            margin: 0 0 50px 50px;
+            margin: 106px 0 0px 0px;
             font-family: "PP Eiko Medium";
-            font-size: 10vw;
+            font-size: 3.5rem;
             color: #ffeecb;
             text-shadow: 1px 1px 5px #090909;
         }
