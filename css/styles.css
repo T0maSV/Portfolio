@@ -105,7 +105,7 @@
             margin: 0 2em;
         }
     }
-    @media screen and (max-width: 850px){
+    @media screen and (max-width: 849px){
 
         #body-index {
             background-size: cover;
@@ -199,7 +199,7 @@
             text-shadow: 1px 1px 5px #090909;
         }
     }
-    @media screen and (max-width: 850px){
+    @media screen and (max-width: 849px){
         
         .header{
             height: 300px;
@@ -268,10 +268,9 @@
         }
     }
 
-    @media screen and (max-width: 850px){
+    @media screen and (max-width: 849px){
         section img{
-            display: inline-block;
-            max-width: 70%;
+            max-width: 60%;
             height: auto;
             border: solid 1px #090909;
             border-radius: 10px;
@@ -314,7 +313,7 @@
             font-weight: bold;
         }
     }
-    @media screen and (max-width: 850px){
+    @media screen and (max-width: 849px){
 
         section table{
             border-collapse: collapse;
