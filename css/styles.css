@@ -137,7 +137,6 @@
             background-color: #090909;
             padding: 2em 0 2em 0;
         }
-
         nav #menu-list{
             list-style-type: none;
             line-height: 3em;
@@ -155,6 +154,7 @@
         }
     }
 
+
     /* Personnalisation des couleurs des titres + effet au passage de la souris */
 
     .yellow-button{
@@ -169,7 +169,7 @@
     }
 
 
-/* Corps des pages*/
+/* CORPS DES PAGES*/
 
 
 
@@ -217,6 +217,7 @@
         }
     }
 
+
     /* Implémentation des bannières */
 
     #header-am{
@@ -255,6 +256,11 @@
     section h1{
         font-size: 2.5em;
     }
+    section p{
+        text-align: center;
+        font-size: 1.4em;
+        margin-bottom: 10vh;
+    }
 
 
     /* Responsive des images de section du site */
@@ -277,12 +283,8 @@
         }
     }
 
-    section p{
-        text-align: center;
-        font-size: 1.4em;
-        margin-bottom: 10vh;
-    }
 
+    /* Responsive des intégrations pdf */
 
     @media screen and (min-width: 850px){
         section object{
@@ -302,8 +304,6 @@
             border-radius: 10px;
         }
     }
-
-
 
 
     /* Tableau représentant mon parcours scolaire */
@@ -394,14 +394,12 @@
     }
 
 
-
     .title{
         text-decoration: underline;
         font-size: 1.8em;
         padding: 0;
         margin: 0;
     }
-
 
 
     /* Boutons téléchargement fichiers */
@@ -432,9 +430,6 @@
     .block-click a p:hover{
         color: #D9A21B;
     }
-
-
-
 
 
 
