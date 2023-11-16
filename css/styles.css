@@ -18,6 +18,7 @@
 
 /* General settings */
 
+
     html {
         scroll-behavior: smooth;
     }
@@ -236,7 +237,6 @@
 /* Section */
 
     section{
-        display: block;
         grid-area: sec;
         margin: 0 7vw 0 7vw;
         text-align: center;
@@ -277,12 +277,34 @@
         }
     }
 
-
     section p{
         text-align: center;
         font-size: 1.4em;
         margin-bottom: 10vh;
     }
+
+
+    @media screen and (min-width: 850px){
+        section object{
+            width: 60%;
+            height: 600px;
+            margin: 5vh 0 3vh 0;
+            border: solid 1px #090909;
+            border-radius: 10px;
+        }
+    }
+    @media screen and (max-width: 850px){
+        section object{
+            width: 80%;
+            height: 400px;
+            margin: 5vh 0 3vh 0;
+            border: solid 1px #090909;
+            border-radius: 10px;
+        }
+    }
+
+
+
 
     /* Tableau représentant mon parcours scolaire */
 
@@ -377,10 +399,39 @@
         text-decoration: underline;
         font-size: 1.8em;
         padding: 0;
-        margin: 0 0 10vh 0;
+        margin: 0;
     }
 
 
+
+    /* Boutons téléchargement fichiers */
+    .block-click{
+        display: block;
+        text-align: center;
+        width: auto;
+        height: auto;
+        margin: 0 0 10vh;
+
+    }
+    .block-click img{
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 40px;
+        max-height: 50px;
+        border: 0;
+        border-radius: 0;
+        margin-right: 10px;
+    }
+    .block-click p{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0;
+        color: #090909;
+    }
+    .block-click a p:hover{
+        color: #D9A21B;
+    }
 
 
 
@@ -391,7 +442,6 @@
 
     footer{
         grid-area: ft;
-        /* display: block; */
         height: 50px;
         background-color: #090909;
         color: #F8F8F8;
